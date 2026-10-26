@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-<meta name="theme-color" content="#f4f0e8"/>
+<meta name="theme-color" content="#101c2c"/>
 <meta name="description" content="惠先生与陈小姐的婚礼邀请函。一部关于风、光与爱的短片。"/>
 <title>惠先生 × 陈小姐 | 我们的婚礼</title>
 <style>
@@ -69,13 +69,31 @@ a{text-decoration:none;color:inherit}
 .intro-fill{height:100%;width:0;background:#eee2cb;transition:width .05s linear}
 .skip-btn,.text-btn{color:inherit;background:none;border:0;letter-spacing:.13em;font-size:12px;padding:12px 2px}
 .skip-btn:hover,.text-btn:hover{text-decoration:underline}
-#topbar{position:fixed;z-index:120;left:0;right:0;top:0;background:var(--cream);color:var(--ink);display:flex;align-items:center;justify-content:space-between;padding:19px clamp(18px,4vw,68px);transition:background .35s ease;gap:20px}
+#topbar{
+    position:fixed;
+    z-index:120;
+    left:0;
+    right:0;
+    top:0;
+    background:#101c2c;
+    color:#f9f4eb;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:19px clamp(18px,4vw,68px);
+    transition:background .35s ease;
+    gap:20px;
+}
 #topbar::after{content:"";position:absolute;left:0;top:0;height:2px;background:var(--gold);width:var(--progress,0%);transition:width .1s linear}
-#topbar.scrolled{background:var(--cream);box-shadow:0 1px 0 var(--line)}
+#topbar.scrolled{
+    background:#101c2cde;
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+}
 .brand{font-family:Georgia,serif;font-size:13px;letter-spacing:.25em;white-space:nowrap}
 .nav-right{display:flex;align-items:center;gap:clamp(10px,2vw,30px)}
 .nav-right button{background:transparent;border:0;color:inherit;font-size:12px;letter-spacing:.06em;padding:6px 1px}
-.nav-right button:hover{color:var(--brown)}
+.nav-right button:hover{color:#ecd3a7;}
 .hero{position:relative;height:100vh;height:100svh;min-height:540px;background:#15283a;overflow:hidden;color:white}
 .hero .photo-bg,.wide-banner .photo-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.03);transform:scale(1.015)}
 .hero .photo-bg{object-position:48% 34%}
