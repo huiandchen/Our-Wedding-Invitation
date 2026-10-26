@@ -22,7 +22,7 @@ a{text-decoration:none;color:inherit}
 .intro-photo{position:absolute;inset:0;background-image:linear-gradient(90deg,rgba(2,9,18,.68),rgba(2,9,18,.20) 70%),linear-gradient(0deg,rgba(2,9,18,.54),transparent 65%);background-size:cover;background-position:72% 48%;opacity:0;transform:scale(1.085);animation:introPhoto 9.5s var(--ease) .8s forwards;will-change:transform}
 .intro-photo[data-photo-bg]{background-image:none}
 @keyframes introPhoto{0%{opacity:0;transform:scale(1.085)}17%{opacity:1}100%{opacity:1;transform:scale(1)}}
-#intro:after,.hero:after,.full-frame:after{content:"";pointer-events:none;position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.81' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' opacity='.21' filter='url(%23n)'/%3E%3C/svg%3E");opacity:.075;mix-blend-mode:soft-light}
+#intro:after,.hero:after{content:"";pointer-events:none;position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.81' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' opacity='.21' filter='url(%23n)'/%3E%3C/svg%3E");opacity:.075;mix-blend-mode:soft-light}
 .intro-frame{position:absolute;inset:25px;border:1px solid rgba(255,255,255,.22);pointer-events:none}
 .intro-corner{position:absolute;top:41px;left:46px;color:#e4d6bd;font-size:10px;letter-spacing:.35em}
 .intro-center{position:relative;z-index:2;width:min(92%,850px);text-align:center;transform:translateY(8vh)}
@@ -44,7 +44,7 @@ a{text-decoration:none;color:inherit}
 .nav-right button{background:transparent;border:0;color:inherit;font-size:12px;letter-spacing:.06em;padding:6px 1px}
 .nav-right button:hover{color:#ecd3a7}
 .hero{position:relative;height:100vh;height:100svh;min-height:540px;background:#15283a;overflow:hidden;color:white}
-.hero .photo-bg,.full-frame .photo-bg,.wide-banner .photo-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.03);transform:scale(1.015)}
+.hero .photo-bg,.wide-banner .photo-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.03);transform:scale(1.015)}
 .hero .photo-bg{object-position:48% 34%}
 .hero .overlay{position:absolute;inset:0;background:linear-gradient(90deg,#0a1728bc 0%,#08152438 60%,#08152420),linear-gradient(0deg,#06101cd4,transparent 58%)}
 .hero-content{position:absolute;z-index:2;left:clamp(26px,9vw,170px);bottom:clamp(98px,17vh,200px);width:min(83%,760px)}
@@ -56,12 +56,12 @@ a{text-decoration:none;color:inherit}
 @keyframes cue{50%{transform:translateY(11px);opacity:.42}}
 .section-pad{padding:clamp(90px,13vh,170px) clamp(22px,7vw,120px)}
 .narrow{max-width:1180px;margin:auto}
-.chapter-head{display:flex;gap:23px;align-items:center;margin-bottom:40px;color:#8c7458}
-.chapter-head .no{font:italic 38px/1 Georgia,serif}
-.chapter-head .rule{height:1px;width:45px;background:#baa78c}
-.chapter-head .label{font-size:10px;letter-spacing:.32em}
-.section-title{margin:0 0 30px;font-size:clamp(34px,5vw,71px);font-weight:400;letter-spacing:.08em;line-height:1.4}
-.story-sub{line-height:2.4;font-size:clamp(13px,1.2vw,16px);letter-spacing:.15em;color:#6c655c}
+.chapter-head{display:flex;gap:16px;align-items:center;margin-bottom:24px;color:#8c7458}
+.chapter-head .no{font:14px/1 Georgia,serif;letter-spacing:.08em}
+.chapter-head .rule{height:1px;width:28px;flex-shrink:0;background:currentColor;opacity:.65}
+.chapter-head .label{font:10px/1.7 Georgia,serif;letter-spacing:.2em}
+.section-title{margin:0 0 24px;font-size:clamp(32px,3.8vw,54px);font-weight:400;letter-spacing:.06em;line-height:1.55}
+.story-sub{margin:0;line-height:2.2;font-size:14px;letter-spacing:.06em;color:#746b60}
 .duo{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(25px,6vw,105px);align-items:center}
 .photo-wrap{position:relative;overflow:hidden;background:#d9d1c4}
 .photo-wrap img{display:block;width:100%;height:100%;object-fit:cover}
@@ -88,40 +88,31 @@ a{text-decoration:none;color:inherit}
   border:8px solid var(--cream);
   box-shadow:0 20px 60px #161e2530;
 }
-.full-frame{position:relative;height:min(910px,100svh);min-height:670px;overflow:hidden;color:#fff;background:#233449}
-.full-frame .photo-bg{object-position:center center}
-.full-frame .overlay{position:absolute;inset:0;background:linear-gradient(90deg,#0e1722bd,transparent 72%),linear-gradient(0deg,#0e17226b,transparent 45%)}
-.full-frame .content{position:absolute;left:clamp(26px,11vw,210px);top:50%;transform:translateY(-50%);z-index:2;width:43%;min-width:310px}
-.full-frame .content p{font-size:clamp(14px,1.5vw,19px);letter-spacing:.15em;line-height:2.25}
-.full-frame .content h2{font-weight:400;font-size:clamp(48px,6.4vw,90px);letter-spacing:.09em;line-height:1.3;margin:25px 0}
-.full-frame .english{font:italic 27px Georgia,serif;color:#eedcc0}
+.sunny-story{background:#faf7f1;padding:clamp(56px,7vw,100px) clamp(24px,7vw,120px);scroll-margin-top:64px}
+.sunny-inner{max-width:1080px;margin:auto;display:grid;grid-template-columns:1.1fr 1fr;align-items:center;gap:clamp(40px,7vw,100px)}
+.sunny-photo{display:block;width:100%;height:auto}
+.sunny-copy{min-width:0}
 .tree-act{background:#e8e2d7}
 .tree-act .duo{grid-template-columns:1.1fr .9fr}
 .tree-act .photo-wrap{max-width:590px}
-.bridgeday{background:#f6f2eb}
+.bridgeday{background:var(--cream)}
 .bridgeday .duo{grid-template-columns:.95fr 1.05fr}
-.bridgeday .primary-photo{aspect-ratio:2/3;max-height:800px}
-.bridgeday .side-photo{aspect-ratio:3/2;margin:40px -7% 0 17%;box-shadow:0 26px 50px #20202014}
+.bridgeday .street-photo{width:100%;max-width:520px;justify-self:end}
+.bridgeday .street-photo img{display:block;width:100%;height:auto}
 .wide-banner{position:relative;min-height:70svh;height:800px;background:#1c3b55;color:white;overflow:hidden}
 .wide-banner .photo-bg{object-position:center 50%}
 .wide-banner .overlay{position:absolute;inset:0;background:linear-gradient(0deg,#0d2333cc,transparent 70%)}
 .wide-banner .banner-title{position:absolute;left:8%;bottom:13%;max-width:650px}
 .wide-banner .banner-title h2{font-weight:400;font-size:clamp(42px,6vw,75px);letter-spacing:.13em;margin:17px 0}
-.triple{background:#102235;color:#f7efe3;padding:clamp(70px,11vw,150px) clamp(22px,7vw,120px)}
-.triple .gallery-head{text-align:center;margin:0 auto 70px;max-width:700px}
-.triple .gallery-head h2{font-size:clamp(36px,5vw,65px);font-weight:400;letter-spacing:.09em}
-.triple .gallery-head p{font-size:13px;color:#b9b0a1;letter-spacing:.18em;line-height:2.3}
+.triple .gallery-head{margin:0 auto 40px;max-width:1180px}
 .photo-tiles{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start}
 .photo-tiles .tile{margin:0}
-.photo-tiles .tile:first-child{margin-top:95px}
-.photo-tiles .tile img{display:block;width:100%;object-fit:contain;max-height:660px;background:#1d3043}
-.photo-tiles figcaption{font:11px Georgia,serif;letter-spacing:.25em;margin-top:19px;color:#c9bba7}
+.photo-tiles .tile img{display:block;width:100%;height:auto}
 .detail{background:var(--cream);padding:115px 22px 110px;text-align:center;position:relative}
 .detail:before,.detail:after{content:"";position:absolute;top:26px;left:30px;width:85px;height:85px;border-left:1px solid #bda682;border-top:1px solid #bda682}
 .detail:after{top:auto;left:auto;bottom:26px;right:30px;transform:rotate(180deg)}
 .detail .mini{color:#937856}
-.detail h2{font-size:clamp(44px,6vw,70px);font-weight:400;letter-spacing:.13em;margin:24px 0 5px}
-.detail h3{font:italic clamp(22px,3vw,38px) Georgia,serif;font-weight:400;color:#887053;margin:5px 0 50px}
+.detail h2{font-size:clamp(44px,6vw,70px);font-weight:400;letter-spacing:.13em;margin:24px 0 36px}
 .details-grid{display:flex;justify-content:center;gap:25px;align-items:stretch;max-width:730px;margin:60px auto 44px}
 .detail-item{border-top:1px solid #c6b99e;border-bottom:1px solid #c6b99e;padding:30px 30px;flex:1;min-width:0;text-align:center}
 .detail-item b{display:block;font-weight:400;font-size:11px;letter-spacing:.3em;color:#887053;margin-bottom:21px}
@@ -129,13 +120,11 @@ a{text-decoration:none;color:inherit}
 .detail .invitation-sub{line-height:2.5;letter-spacing:.17em;font-size:14px;color:#746b60}
 .primary-btn{border:1px solid #7c6a54;padding:13px 28px;background:transparent;color:#4f4132;font-size:12px;letter-spacing:.15em;margin-top:30px;transition:all .3s}
 .primary-btn:hover{background:#102234;color:white;border-color:#102234}
-.closing{position:relative;height:85svh;min-height:650px;background:#182536;color:white;overflow:hidden}
-.closing img{position:absolute;width:100%;height:100%;object-fit:cover;object-position:center 46%}
-.closing .shade{position:absolute;inset:0;background:linear-gradient(0deg,#071423b9,transparent 66%)}
-.closing-copy{position:absolute;bottom:11%;left:8%;right:8%;text-align:center}
-.closing-copy .script{font:italic clamp(50px,8vw,104px) Georgia,serif;color:#f0dbb5}
-.closing-copy p{letter-spacing:.3em;font-size:13px;line-height:2}
-.footer{background:#0c1927;color:#c7bba6;text-align:center;padding:32px 20px;font:11px Georgia,serif;letter-spacing:.22em}
+.closing{background:var(--cream);color:var(--ink);padding:48px 24px 64px}
+.closing img{display:block;width:min(100%,440px);height:auto;margin:0 auto}
+.closing-copy{margin:36px auto 0;text-align:center}
+.closing-copy h2{font-size:clamp(28px,3.8vw,38px);font-weight:400;letter-spacing:.08em;line-height:1.6;margin:0}
+.footer{background:var(--cream);color:#74604b;text-align:center;padding:24px 20px 32px;font:11px Georgia,serif;letter-spacing:.22em;border-top:1px solid var(--line)}
 .reveal{opacity:0;transform:translateY(31px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
 .reveal.visible{opacity:1;transform:translateY(0)}
 #customModal{border:0;background:#faf7f0;color:#1c2936;max-width:490px;width:calc(100% - 32px);box-shadow:0 25px 100px #0008;padding:clamp(24px,4vw,42px)}
@@ -173,42 +162,30 @@ a{text-decoration:none;color:inherit}
   right:0;
   bottom:-35px;
 }
- .chapter-head{margin-bottom:25px}.section-title{font-size:clamp(32px,10vw,50px)}
- .story-copy{order:0}.tree-act .photo-wrap,.bridgeday .primary-photo{width:min(100%,520px);margin:auto}
- .full-frame{height:78svh;min-height:580px}.full-frame .photo-bg{object-position:62% center}.full-frame .overlay{background:linear-gradient(0deg,#081522ca,transparent 80%)}
- .full-frame .content{left:7%;top:auto;bottom:13%;transform:none;min-width:0;width:85%}.full-frame .content h2{font-size:clamp(42px,11vw,65px)}
- .bridgeday .side-photo{width:76%;margin:-45px 0 0 auto;position:relative;border:7px solid #f6f2eb}
+ .chapter-head{margin-bottom:20px}.section-title{font-size:clamp(30px,7vw,38px);margin-bottom:18px}.story-sub{font-size:13px}
+ .story-copy{order:0}.tree-act .photo-wrap,.bridgeday .street-photo{width:min(100%,520px);margin:auto}
+ .sunny-story{padding:48px 24px 56px}.sunny-inner{grid-template-columns:1fr;gap:32px;max-width:460px}
  .wide-banner{min-height:0;height:68svh}.wide-banner .photo-bg{object-position:47% center}
- .triple{padding:85px 22px}.photo-tiles{gap:15px}.photo-tiles .tile:first-child{margin-top:50px}.photo-tiles figcaption{font-size:9px;letter-spacing:.12em}
+ .photo-tiles{grid-template-columns:1fr;gap:24px}
  .details-grid{gap:5px}.detail-item{padding:25px 8px}.detail:before,.detail:after{width:40px;height:40px}
- .closing{min-height:560px}.closing img{object-position:43% center}
+ .closing{padding:56px 24px 48px}.closing-copy{margin-top:28px}
 }
 
-/* Wedding invitation v2: both newly provided ORIGINAL photographs (no image regeneration). */
-.motion-scene{background:#0e2235;color:#f7efe5;padding:clamp(65px,10vw,135px) clamp(18px,5vw,80px)}
-.motion-inner{max-width:1210px;margin:0 auto}
-.motion-top{display:flex;justify-content:space-between;gap:15px;align-items:center;border-bottom:1px solid #d8c4a058;padding-bottom:22px;margin-bottom:28px;color:#dbc6a2}
-.motion-top .small{font:11px Georgia,serif;letter-spacing:.29em}
-.motion-photo{position:relative;overflow:hidden;border:1px solid #d8c4a045;background:#173349;box-shadow:0 24px 65px #050c1647}
-.motion-photo img{width:100%;height:auto;display:block;aspect-ratio:2048/1365;object-fit:contain}
-.motion-caption{display:flex;align-items:flex-end;justify-content:space-between;gap:35px;padding-top:36px}
-.motion-caption .motion-title{margin:0;font-size:clamp(34px,5.5vw,72px);font-weight:400;letter-spacing:.12em;line-height:1.35}
-.motion-caption .motion-text{font-size:clamp(13px,1.3vw,16px);line-height:2.25;letter-spacing:.12em;color:#d3c8ba;text-align:right}
-.evening-story{background:linear-gradient(145deg,#19314b,#0b192a 72%);color:#fff;overflow:hidden;padding:clamp(65px,8vw,120px) clamp(20px,7vw,105px)}
-.evening-grid{max-width:1170px;margin:auto;display:grid;grid-template-columns:1fr 1.05fr;align-items:center;gap:clamp(35px,7vw,110px)}
-.evening-copy .small{font:11px Georgia,serif;color:#cdbb9d;letter-spacing:.25em}
-.evening-copy h2{font-weight:400;font-size:clamp(40px,5.3vw,76px);letter-spacing:.14em;line-height:1.45;margin:28px 0}
-.evening-copy .english{font:italic clamp(17px,2vw,25px) Georgia,serif;color:#dbc19b;line-height:1.8}
-.evening-copy .note{max-width:430px;color:#d7d0c5;font-size:14px;letter-spacing:.12em;line-height:2.3;margin-top:38px}
-.evening-frame{position:relative;width:100%;max-width:570px;justify-self:end;background:#24394c;padding:9px;box-shadow:0 24px 80px #01070f74;border:1px solid #c9b38e66}
-.evening-frame img{display:block;width:100%;height:auto;object-fit:contain}
-.evening-frame:before{content:'06  /  THE BLUE HOUR';position:absolute;bottom:27px;right:26px;color:#fff;border:1px solid #ffffff70;background:#0e17217a;backdrop-filter:blur(5px);padding:10px 12px;font:10px Georgia,serif;letter-spacing:.19em}
+/* Shared chapter typography and spacing; photographs keep their original proportions. */
+.motion-scene,.evening-story,.triple{background:var(--cream);color:var(--ink);padding:clamp(72px,8vw,110px) clamp(24px,7vw,120px);scroll-margin-top:64px}
+.motion-inner{max-width:1180px;margin:0 auto}
+.motion-copy{margin-bottom:40px}
+.motion-photo img{width:100%;height:auto;display:block}
+.evening-grid{max-width:1180px;margin:auto;display:grid;grid-template-columns:1fr 1.05fr;align-items:center;gap:clamp(40px,7vw,100px)}
+.evening-copy{min-width:0}
+.evening-frame{width:100%;max-width:520px;justify-self:end}
+.evening-frame img{display:block;width:100%;height:auto}
 @media(max-width:780px){
- .motion-scene{padding:66px 15px 78px}.motion-top{margin-bottom:15px}.motion-top .small{font-size:9px;letter-spacing:.17em}
- .motion-caption{display:block;padding:22px 6px 0}.motion-caption .motion-title{font-size:clamp(30px,9vw,46px)}.motion-caption .motion-text{text-align:left;line-height:2.15;margin-top:13px}
- .evening-story{padding:74px 22px 80px}.evening-grid{grid-template-columns:1fr;gap:32px}
- .evening-frame{grid-row:1;max-width:470px;justify-self:center}.evening-copy{grid-row:2;text-align:left}
- .evening-copy h2{font-size:clamp(35px,10vw,52px);margin:15px 0}.evening-copy .note{margin-top:20px}
+ .motion-scene,.evening-story,.triple{padding:64px 24px}
+ .motion-inner,.evening-grid,.triple .narrow,.triple .gallery-head{max-width:520px}
+ .motion-copy,.triple .gallery-head{margin-bottom:32px}
+ .evening-grid{grid-template-columns:1fr;gap:32px}
+ .evening-frame{justify-self:center}
 }
 
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.001s!important;transition-duration:.001s!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}.intro-photo{opacity:1;transform:none}}
@@ -241,33 +218,34 @@ a{text-decoration:none;color:inherit}
   <div class="collage reveal"><div class="photo-wrap main"><img data-photo="selfie" alt="两人在悉尼街边开心自拍的婚纱照" loading="lazy"/></div><div class="photo-wrap secondary"><img data-photo="booth" alt="两人在彩色街头电话亭旁相望的照片" loading="lazy"/></div></div>
  </div>
 </section>
-<section class="full-frame" id="sunny">
- <img class="photo-bg" data-photo="sun_kiss" alt="两人在逆光的悉尼街头浪漫拥吻" loading="lazy"/>
- <div class="overlay"></div><div class="content reveal"><span class="eyebrow">02 — SUNSHINE & LAUGHTER</span><h2 class="song">喜欢的日子，<br/>都有光。</h2><div class="english">All the little things.</div><p class="song">有时候，幸福不需要台词。<br/>一个眼神，一个拥抱，就足够。</p></div>
+<section class="sunny-story" id="sunny" aria-labelledby="sunny-title">
+ <div class="sunny-inner">
+  <img class="sunny-photo" data-photo="sun_kiss" width="1365" height="2048" alt="两人在逆光的悉尼街头浪漫拥吻" loading="lazy"/>
+  <div class="sunny-copy reveal"><div class="chapter-head"><span class="no">02</span><span class="rule"></span><span class="label">SUNSHINE</span></div><h2 class="section-title song" id="sunny-title">喜欢的日子，<br/>都有光。</h2><p class="story-sub song">有时候，幸福不需要台词。<br/>一个眼神，一个拥抱，就足够。</p></div>
+ </div>
 </section>
 <section class="section-pad tree-act" id="shade">
  <div class="narrow duo"><div class="photo-wrap portrait reveal"><img class="full-photo" data-photo="tree" alt="两人依偎在大树下，婚纱裙摆自然铺开" loading="lazy"/></div><div class="story-copy reveal"><div class="chapter-head"><span class="no">03</span><span class="rule"></span><span class="label">STAY CLOSE</span></div><h2 class="section-title song">从盛夏的阳光，<br/>到树荫下的温柔。</h2><p class="story-sub song">这一生想收藏的画面很多，<br/>而最喜欢的，<br/>是每一张都有你。</p></div></div>
 </section>
 <section class="section-pad bridgeday" id="alive">
- <div class="narrow duo"><div class="story-copy reveal"><div class="chapter-head"><span class="no">04</span><span class="rule"></span><span class="label">ALIVE WITH YOU</span></div><h2 class="section-title song">有风，有海，<br/>还有我们。</h2><p class="story-sub song">把晴天留给大海，<br/>把自由留给风，<br/>把所有平凡而闪亮的日子，<br/>留给我们。</p><div class="photo-wrap side-photo"><img data-photo="brick" alt="两人在悉尼砖墙前并肩坐着" loading="lazy"/></div></div><div class="photo-wrap primary-photo reveal"><img class="full-photo" data-photo="bridge_day" alt="两人身穿正式婚纱礼服，在悉尼海港大桥远景前合影" loading="lazy"/></div></div>
+ <div class="narrow duo"><div class="story-copy reveal"><div class="chapter-head"><span class="no">04</span><span class="rule"></span><span class="label">BY THE SEA</span></div><h2 class="section-title song">有风，有海，<br/>还有我们。</h2><p class="story-sub song">把晴天留给大海，<br/>把自由留给风，<br/>把所有平凡而闪亮的日子，<br/>留给我们。</p></div><div class="street-photo reveal"><img data-photo="brick" width="1365" height="2048" alt="两人在悉尼砖墙前并肩坐着" loading="lazy"/></div></div>
 </section>
 <section class="motion-scene" id="wind" aria-label="风里的拥抱">
  <div class="motion-inner">
-  <div class="motion-top"><span class="small">05 — ALIVE WITH YOU</span><span class="small">A LOVE STORY IN SYDNEY</span></div>
-  <div class="motion-photo reveal"><img data-photo="wind_bridge" alt="惠先生与陈小姐在深蓝天空下迎风拥抱，悉尼海港大桥在身后" loading="lazy"/></div>
-  <div class="motion-caption reveal"><h2 class="motion-title song">有风的时候，<br/>我们正好相爱。</h2><p class="motion-text song">风吹起头纱，阳光落在肩头。<br/>这一刻的笑容，想珍藏很久。</p></div>
+  <div class="motion-copy reveal"><div class="chapter-head"><span class="no">05</span><span class="rule"></span><span class="label">IN THE WIND</span></div><h2 class="section-title song">有风的时候，<br/>我们正好相爱。</h2><p class="story-sub song">风吹起头纱，阳光落在肩头。<br/>这一刻的笑容，想珍藏很久。</p></div>
+  <div class="motion-photo reveal"><img data-photo="wind_bridge" width="2048" height="1365" alt="惠先生与陈小姐在深蓝天空下迎风拥抱，悉尼海港大桥在身后" loading="lazy"/></div>
  </div>
 </section>
 <section class="evening-story" id="evening" aria-label="海港大桥傍晚合影">
- <div class="evening-grid"><div class="evening-copy reveal"><span class="small">06 — INTO THE BLUE HOUR</span><h2 class="song">白昼会落幕，<br/>故事不会。</h2><div class="english">Every sunset leads us somewhere.</div><p class="note song">从白日的明亮，到傍晚的温柔。<br/>时间在变，我们始终并肩。</p></div>
- <div class="evening-frame reveal"><img data-photo="bridge_dusk" alt="新更换的竖幅悉尼海港大桥合影，穿灰色西装与白色婚纱的惠先生和陈小姐" loading="lazy"/></div></div>
+ <div class="evening-grid"><div class="evening-copy reveal"><div class="chapter-head"><span class="no">06</span><span class="rule"></span><span class="label">AT DUSK</span></div><h2 class="section-title song">白昼会落幕，<br/>故事不会。</h2><p class="story-sub song">从白日的明亮，到傍晚的温柔。<br/>时间在变，我们始终并肩。</p></div>
+ <div class="evening-frame reveal"><img data-photo="bridge_dusk" width="1365" height="2048" alt="惠先生与陈小姐身穿灰色西装与白色婚纱，在傍晚的悉尼海港大桥前合影" loading="lazy"/></div></div>
 </section>
 <section class="triple" id="promise">
- <div class="gallery-head reveal"><span class="eyebrow" style="color:#cab591">07 — THE NEXT CHAPTER</span><h2 class="song">从这一刻，走向以后。</h2><p class="song">傍晚的风，海边的光。<br/>愿往后的每一幕，都能并肩走过。</p></div>
- <div class="photo-tiles narrow"><figure class="tile reveal"><img data-photo="opera_wide" alt="两人在悉尼歌剧院海景前的正式婚纱合影" loading="lazy"/><figcaption>01 / AN EVENING IN SYDNEY</figcaption></figure><figure class="tile reveal"><img data-photo="opera_walk" alt="两人在悉尼歌剧院旁相互凝望" loading="lazy"/><figcaption>02 / FOREVER, TOGETHER</figcaption></figure></div>
+ <div class="gallery-head reveal"><div class="chapter-head"><span class="no">07</span><span class="rule"></span><span class="label">THE NEXT CHAPTER</span></div><h2 class="section-title song">从这一刻，<br/>走向以后。</h2><p class="story-sub song">傍晚的风，海边的光。<br/>愿往后的每一幕，都能并肩走过。</p></div>
+ <div class="photo-tiles narrow"><figure class="tile reveal"><img width="2047" height="1365" data-photo="opera_wide" alt="两人在悉尼歌剧院海景前的正式婚纱合影" loading="lazy"/></figure><figure class="tile reveal"><img width="2048" height="1365" data-photo="opera_walk" alt="两人在悉尼歌剧院旁相互凝望" loading="lazy"/></figure></div>
 </section>
-<section class="detail" id="invite"><div class="narrow reveal"><span class="eyebrow mini">YOU ARE INVITED · THE NEXT SCENE</span><h2 class="song">诚邀您见证<br/>我们的婚礼</h2><h3>The next chapter begins with you.</h3><div style="font-size:clamp(24px,4vw,45px);letter-spacing:.13em" class="song">惠先生 <span class="serif" style="color:#ad9477">&</span> 陈小姐</div><div class="details-grid"><div class="detail-item"><b>WEDDING DATE / 婚礼日期</b><span id="dateDisplay" class="song">日期待填写</span><div id="timeDisplay" style="font-size:12px;color:#918373;margin-top:12px">时间待填写</div></div><div class="detail-item"><b>VENUE / 婚礼地点</b><span id="venueDisplay" class="song">地点待填写</span><div id="cityDisplay" style="font-size:12px;color:#918373;margin-top:12px">城市待填写</div></div></div><p class="invitation-sub song">想把这份幸福，亲自分享给你。<br/>期待在重要的那一天，与你相聚。</p><button class="primary-btn" type="button" id="editInfo">填写婚礼日期和地点 ↗</button></div></section>
-<section class="closing" id="thankyou"><img data-photo="closeup" alt="头纱随风飘动的新人浪漫特写" loading="lazy"/><div class="shade"></div><div class="closing-copy reveal"><div class="script">To be continued...</div><p class="song">故事还长，幸福未完待续。</p></div></section>
+<section class="detail" id="invite"><div class="narrow reveal"><span class="eyebrow mini">YOU ARE INVITED · THE NEXT SCENE</span><h2 class="song">诚邀您见证<br/>我们的婚礼</h2><div style="font-size:clamp(24px,4vw,45px);letter-spacing:.13em" class="song">惠先生 <span class="serif" style="color:#ad9477">&</span> 陈小姐</div><div class="details-grid"><div class="detail-item"><b>WEDDING DATE / 婚礼日期</b><span id="dateDisplay" class="song">日期待填写</span><div id="timeDisplay" style="font-size:12px;color:#918373;margin-top:12px">时间待填写</div></div><div class="detail-item"><b>VENUE / 婚礼地点</b><span id="venueDisplay" class="song">地点待填写</span><div id="cityDisplay" style="font-size:12px;color:#918373;margin-top:12px">城市待填写</div></div></div><p class="invitation-sub song">想把这份幸福，亲自分享给你。<br/>期待在重要的那一天，与你相聚。</p><button class="primary-btn" type="button" id="editInfo">填写婚礼日期和地点 ↗</button></div></section>
+<section class="closing" id="thankyou" aria-labelledby="closing-title"><img data-photo="bridge_day" width="1365" height="2048" alt="惠先生与陈小姐在悉尼海港大桥前的双人全身合照" loading="lazy"/><div class="closing-copy reveal"><h2 class="song" id="closing-title">婚礼见。</h2></div></section>
 </main>
 <footer class="footer">HUI MR. & CHEN MS. <span style="padding:0 16px;color:#6e5f4b">✦</span> OUR LOVE STORY</footer>
 <dialog id="customModal" aria-label="编辑婚礼信息"><h2 class="song">填写婚礼信息</h2><p>可先预览，确定日期和地点后再填写。点击“下载填写后的单文件 HTML”可保存分享用的新版本，照片仍全部内嵌。</p><form id="inviteForm"><label>婚礼日期<input id="fDate" placeholder="例如：2026年12月26日 星期六"/></label><label>开始时间<input id="fTime" placeholder="例如：18:00 婚礼仪式 · 19:00 晚宴"/></label><label>婚礼地点<input id="fVenue" placeholder="例如：某某酒店 · 某某宴会厅"/></label><label>城市<input id="fCity" placeholder="例如：中国 · 广州"/></label><div class="modal-actions"><button type="button" id="closeModal">取消</button><button class="save" type="submit">保存并预览</button></div><div class="modal-actions"><button type="button" id="downloadCustom">下载填写后的单文件 HTML ↗</button></div></form></dialog>
