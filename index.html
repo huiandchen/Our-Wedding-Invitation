@@ -312,7 +312,9 @@ a{text-decoration:none;color:inherit}
 
 /* 05 — cinematic peak */
 #wind{
-    background:#0e2235;
+    background:#163149;
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
     color:#f7efe5;
     padding:84px 0 0;
 }
@@ -359,7 +361,7 @@ a{text-decoration:none;color:inherit}
 }
 
 #promise .photo-tiles .tile:nth-child(2){
-    margin-top:90px;
+    margin-top:0;
 }
 
 
@@ -379,16 +381,17 @@ a{text-decoration:none;color:inherit}
 
     #sunny .sunny-photo{
         width:92%;
+        margin:0 auto;
     }
 
     #sunny .sunny-copy{
         position:absolute;
-        right:-1%;
+        right:-8%;
         bottom:-110px;
-        width:72%;
+        width:68%;
         padding:12px 14px 14px;
 
-        background:rgba(244,240,232,.68);
+        background:rgba(244,240,232,.56);
         backdrop-filter:blur(10px);
         -webkit-backdrop-filter:blur(10px);
 
@@ -405,7 +408,8 @@ a{text-decoration:none;color:inherit}
     }
 
     #sunny .story-sub{
-        line-height:1.7;
+        line-height:1.65;
+        white-space:nowrap;
     }
 
     /* 03: photo left, copy shifted right */
@@ -415,7 +419,7 @@ a{text-decoration:none;color:inherit}
 
     #shade .photo-wrap{
         width:92%;
-        margin:0;
+        margin:0 auto;
     }
 
     #shade .story-copy{
@@ -434,19 +438,31 @@ a{text-decoration:none;color:inherit}
         padding-bottom:60px;
     }
 
-    #alive .story-copy{
-        max-width:320px;
+    #alive .duo{
+        display:flex;
+        flex-direction:column;
     }
 
     #alive .street-photo{
-        width:88%;
-        margin:34px 0 0 auto;
+        order:1;
+        width:92%;
+        margin:-10px auto 30px;
+    }
+
+    #alive .story-copy{
+        order:2;
+        max-width:320px;
     }
 
 
     /* 05: dark cinematic break */
     #wind{
-        padding:64px 0 0;
+        padding:64px 0 32px;
+    }
+
+    #wind .motion-photo{
+        width:calc(100% - 48px);
+        margin:0 auto;
     }
 
     #wind .motion-copy{
@@ -487,23 +503,19 @@ a{text-decoration:none;color:inherit}
 
     #promise .gallery-head{
         order:2;
-        margin-top:42px;
+        margin-top:28px;
     }
 
     /* 07: one large + one smaller overlapping image */
     #promise .photo-tiles{
-        display:block;
+        display:flex;
+        flex-direction:column;
+        gap:16px;
     }
 
-    #promise .photo-tiles .tile:first-child{
+    #promise .photo-tiles .tile{
         width:100%;
-    }
-
-    #promise .photo-tiles .tile:nth-child(2){
-        width:72%;
-        margin:-24px 0 0 auto;
-        position:relative;
-        z-index:2;
+        margin:0;
     }
 }
 
