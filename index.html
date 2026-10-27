@@ -257,6 +257,31 @@ a{text-decoration:none;color:inherit}
    EDITORIAL STORY RHYTHM
    ============================== */
 
+/* 02 — text card over photo */
+#sunny .sunny-inner{
+    position:relative;
+    display:block;
+    max-width:900px;
+}
+
+#sunny .sunny-photo{
+    width:78%;
+    display:block;
+}
+
+#sunny .sunny-copy{
+    position:absolute;
+    right:0;
+    bottom:7%;
+    width:46%;
+    background:rgba(244,240,232,.68);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    padding:34px 38px;
+    box-shadow:0 10px 24px rgba(17,34,53,.06);
+    z-index:2;
+}
+
 /* 03 — quiet editorial spread */
 #shade .duo{
     grid-template-columns:1.28fr .72fr;
@@ -340,6 +365,48 @@ a{text-decoration:none;color:inherit}
 
 /* MOBILE */
 @media(max-width:780px){
+
+    /* 02: editorial overlay card */
+    #sunny{
+        padding:48px 18px 145px;
+    }
+
+    #sunny .sunny-inner{
+        position:relative;
+        display:block;
+        max-width:500px;
+    }
+
+    #sunny .sunny-photo{
+        width:92%;
+    }
+
+    #sunny .sunny-copy{
+        position:absolute;
+        right:-1%;
+        bottom:-110px;
+        width:72%;
+        padding:12px 14px 14px;
+
+        background:rgba(244,240,232,.68);
+        backdrop-filter:blur(10px);
+        -webkit-backdrop-filter:blur(10px);
+
+        box-shadow:0 8px 20px rgba(17,34,53,.05);
+        z-index:2;
+    }
+
+    #sunny .chapter-head{
+        margin-bottom:10px;
+    }
+
+    #sunny .section-title{
+        white-space:nowrap;
+    }
+
+    #sunny .story-sub{
+        line-height:1.7;
+    }
 
     /* 03: photo left, copy shifted right */
     #shade .duo{
